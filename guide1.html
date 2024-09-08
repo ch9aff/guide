@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Styles pour la mise en page */
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+        .image-container img.active {
+            display: block;
+        }
+        .controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .controls button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Suivez les indications visuelles</h1>
+    </header>
+
+    <main>
+        <p>Voici les images pour vous guider :</p>
+        <div class="image-container">
+            <img src="drouj_iot/asc_1.JPG" height="300" width="300" alt="Guide vers iot" class="active">
+            <img src="drouj_iot/asc_2.JPG" height="300" width="300" alt="Guide vers iot" >
+            <img src="drouj_iot/im4.JPG" height="300" width="300" alt="Guide vers iot" >
+            <img src="drouj_iot/im5.JPG" height="300" width="300" alt="Guide vers iot" >
+            <img src="drouj_iot/im6.JPG" height="300" width="300" alt="Guide vers iot" >
+            <img src="drouj_iot/im7.JPG" height="300" width="300" alt="Guide vers iot" >
+            <img src="drouj_iot/im8.JPG" height="300" width="300" alt="Guide vers iot" >
+            <img src="drouj_iot/im9.JPG" height="300" width="300" alt="Guide vers iot" >
+            <img src="drouj_iot/im10.JPG" height="300" width="300" alt="Guide vers iot" >
+
+            <!-- Ajoutez d'autres images selon les destinations -->
+        </div>
+        <div class="controls">
+            <button onclick="previousImage()">Précédent</button>
+            <button onclick="nextImage()">Suivant</button>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="direction.html">Retour à la sélection de direction</a></p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.image-container img');
+        const totalImages = images.length;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>

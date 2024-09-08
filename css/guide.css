@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Bleu très clair pour le fond */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style pour l'en-tête */
+header {
+    background-color: #0056b3; /* Bleu foncé */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Style pour le contenu principal */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #ff6600; /* Orange pour le texte */
+}
+
+/* Style des boutons */
+button {
+    background-color: #ff6600; /* Orange pour le fond du bouton */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e65c00; /* Orange plus foncé pour l'effet hover */
+}
+
+button:active {
+    background-color: #ff4500; /* Autre variation d'orange pour le clic */
+    transform: scale(0.98);
+}
+
+/* Style pour le pied de page */
+footer {
+    background-color: #0056b3; /* Même bleu que l'en-tête */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
